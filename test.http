@@ -1,0 +1,11 @@
+POST https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/train
+###
+
+GET https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/predict/left/0/right/1
+
+###
+GET https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/predict/left/0/right/0
+###
+GET https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/predict/left/1/right/0
+###
+GET https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/predict/left/1/right/1
