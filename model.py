@@ -1,7 +1,8 @@
 import numpy as np
 import torch
 import torch.nn as nn
-import gdown
+
+
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
@@ -35,7 +36,7 @@ class AndModel(nn.Module):
             optimizer.step()
             print(f'epoch: {epoch}, loss: {loss.item()}')
   
-    def predict(self, input_data):
+    def predict(self, input_data):     
         input_data = torch.FloatTensor(input_data).to(device)
         output = torch.sigmoid(self(input_data)).item()
         return int(output > 0.5)
@@ -80,7 +81,7 @@ class XorModel(nn.Module):
 
     def predict(self, input_data) ->int:
         input_data = torch.FloatTensor(input_data).to(device)
-        output = torch.sig+-++moid(self(input_data)).item()
+        output = torch.sigmoid(self(input_data)).item()
         return int(output > 0.5)
     
     def save(self, path):
@@ -135,7 +136,7 @@ class NotModel(nn.Module):
     
     def __init__(self):
         super(NotModel, self).__init__()
-        self.layer1 = nn.Linear(2, 10, bias=True)
+        self.layer1 = nn.Linear(1, 10, bias=True)
         self.layer2 = nn.Linear(10, 10, bias=True)
         self.layer3 = nn.Linear(10, 1, bias=True)
         self.relu = nn.ReLU()

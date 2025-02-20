@@ -4,6 +4,8 @@ POST https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/trainX
 ###
 POST https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/trainOr
 ###
+POST https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/trainNot
+###
 GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictXor/left/0/right/1
 ###
 GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictXor/left/0/right/0
@@ -27,3 +29,8 @@ GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predict
 GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictOr/left/1/right/0
 ###
 GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictOr/left/1/right/1
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictNot/left/1/right/1
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictNot/left/0/right/1
+###
