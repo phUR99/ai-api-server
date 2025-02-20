@@ -15,30 +15,29 @@ def read_root():
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
-@app.get("/predictAnd/left/{left}/right/{right}") #endpoint
-def predict(left: int, right: int):
-    result = modelAnd.predict([left, right])
-    return {"result": result}
+@app.get("/predict{model}/left/{left}/right/{right}") #endpoint
+def predict(model : str, left: int, right: int):
+    try:
+        if model == 'And':
+            result = modelAnd.predict([left, right])
+        elif model == 'Xor':
+            result = modelXor.predict([left, right])
+        elif model == 'Or':
+            result = modelOr.predict([left, right])
+        return {"result": result}
+    except Exception as e:
+        return {"error" : f"error is occured{str(e)}"}
 
-@app.get("/predictOr/left/{left}/right/{right}") #endpoint
-def predict(left: int, right: int):
-    result = modelOr.predict([left, right])
-    return {"result": result}
-
-@app.get("/predictXor/left/{left}/right/{right}") #endpoint
-def predict(left: int, right: int):
-    result = modelXor.predict([left, right])
-    return {"result": result}
-
-@app.post("/trainAnd")
-def train():
-    modelAnd.train()    
+@app.post("/train{model}")
+def train(model:str):
+    try:
+        if model == 'And':
+            modelAnd.train()    
+        elif model == 'Xor':
+            modelOr.train()
+        elif model == 'Or':
+            modelXor.train()
+    except Exception as e:
+        return {"error" : f"error is occured{str(e)}"}    
     return {"result" : "OK"}
-@app.post("/trainOr")
-def train():
-    modelOr.train()
-    return {"result" : "OK"}
-@app.post("/trainXor")
-def train():
-    modelXor.train()
-    return {"result" : "OK"}    
+   
