@@ -63,7 +63,7 @@ class XorModel(nn.Module):
         inputs = torch.FloatTensor([[0, 0], [0, 1], [1, 0], [1, 1]]).to(device)
         outputs = torch.FloatTensor([[0], [1], [1], [0]]).to(device)
         criterion = nn.BCEWithLogitsLoss()
-        optimizer = torch.optim.Adam(self.parameters(), lr=learning_rate, momentum=0.9)
+        optimizer = torch.optim.Adam(self.parameters(), lr=learning_rate)
         for epoch in range(epochs):
             optimizer.zero_grad()
             output = self(inputs)
@@ -72,10 +72,10 @@ class XorModel(nn.Module):
             optimizer.step()
             print(f'epoch: {epoch}, loss: {loss.item()}')
 
-    def predict(self, input_data):
+    def predict(self, input_data) ->int:
         input_data = torch.FloatTensor(input_data).to(device)
         output = torch.sigmoid(self(input_data)).item()
-        return output > 0.5  
+        return int(output > 0.5)
     
 class OrModel(nn.Module):
     def __init__(self):
@@ -99,7 +99,7 @@ class OrModel(nn.Module):
         inputs = torch.FloatTensor([[0, 0], [0, 1], [1, 0], [1, 1]]).to(device)
         outputs = torch.FloatTensor([[0], [1], [1], [1]]).to(device)
         criterion = nn.BCEWithLogitsLoss()
-        optimizer = torch.optim.Adam(self.parameters(), lr=learning_rate, momentum=0.9)
+        optimizer = torch.optim.Adam(self.parameters(), lr=learning_rate)
         for epoch in range(epochs):
             optimizer.zero_grad()
             output = self(inputs)
@@ -108,8 +108,8 @@ class OrModel(nn.Module):
             optimizer.step()
             print(f'epoch: {epoch}, loss: {loss.item()}')
             
-    def predict(self, input_data): 
+    def predict(self, input_data) ->int: 
         input_data = torch.FloatTensor(input_data).to(device)
         output = torch.sigmoid(self(input_data)).item()
-        return output > 0.5
+        return int(output > 0.5)
     

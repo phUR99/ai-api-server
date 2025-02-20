@@ -1,9 +1,29 @@
-POST https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/train
+POST https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/trainAnd
 ###
-GET https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/predict/left/0/right/1
+POST https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/trainXor
 ###
-GET https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/predict/left/0/right/0
+POST https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/trainOr
 ###
-GET https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/predict/left/1/right/0
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictXor/left/0/right/1
 ###
-GET https://legendary-space-dollop-x64gg96pqp5fpx9r-8000.app.github.dev/predict/left/1/right/1
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictXor/left/0/right/0
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictXor/left/1/right/0
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictXor/left/1/right/1
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictAnd/left/0/right/1
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictAnd/left/0/right/0
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictAnd/left/1/right/0
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictAnd/left/1/right/1
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictOr/left/0/right/1
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictOr/left/0/right/0
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictOr/left/1/right/0
+###
+GET https://super-duper-space-disco-x64gg96pgwjc9v7j-8000.app.github.dev/predictOr/left/1/right/1
