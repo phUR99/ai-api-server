@@ -39,6 +39,13 @@ class AndModel:
     def predict(self, input_data):
         total_input = np.dot(input_data, self.weights) + self.bias
         return self.step_function(total_input)    
+    def save(self, path):
+        np.savez(path, weights=self.weights, bias=self.bias)
+    
+    def load(self, path):
+        data = np.load(path)
+        self.weights = data['weights']
+        self.bias = data['bias']
 
 class XorModel(nn.Module):
     def __init__(self):
@@ -77,6 +84,12 @@ class XorModel(nn.Module):
         output = torch.sigmoid(self(input_data)).item()
         return int(output > 0.5)
     
+    def save(self, path):
+        torch.save(self.state_dict(), path)
+    
+    def load(self, path):
+        self.load_state_dict(torch.load(path))
+
 class OrModel(nn.Module):
     def __init__(self):
         # 파라메터
@@ -113,3 +126,9 @@ class OrModel(nn.Module):
         output = torch.sigmoid(self(input_data)).item()
         return int(output > 0.5)
     
+    def save(self, path):
+        torch.save(self.state_dict(), path)
+    
+    def load(self, path):
+        self.load_state_dict(torch.load(path))
+
