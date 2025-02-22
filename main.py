@@ -30,7 +30,7 @@ if(not os.path.isfile('not.pt')):
 app = FastAPI()
 
 @app.get("/predict{model}/left/{left}/right/{right}") #endpoint
-def predict(model : str, left: int, right: int):
+def predict(model : str, left: int, right: int=1):
     try:
         if model == 'And':
             result = modelAnd.predict([left, right])
